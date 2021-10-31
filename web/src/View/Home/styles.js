@@ -24,5 +24,4 @@ export const ContainerCard = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     
-
 `

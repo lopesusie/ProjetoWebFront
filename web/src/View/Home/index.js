@@ -4,6 +4,14 @@ import * as Styled from './styles';
 
 /*IMAGENS*/
 import Imagem from '../../Imgs/filter.png';
+import jiujitsu from '../../Imgs/jiuj.png'
+import viagem from '../../Imgs/viagem.png'
+import cinema from '../../Imgs/cinema.png'
+import lanche from '../../Imgs/lanche.jpg'
+import prova from '../../Imgs/prova.jpg'
+import academia from '../../Imgs/academia.jpg'
+import compra from '../../Imgs/compra.jpg'
+import trabalho from '../../Imgs/trabalho.png'
 
 /*COMPONENTES*/
 import Header from '../../Components/Header';
@@ -38,14 +46,14 @@ function Home() {
         </Styled.ContainerFilter>
 
         <Styled.ContainerCard>
-          <TaskCard />
-          <TaskCard />
-          <TaskCard />
-          <TaskCard />
-          <TaskCard />
-          <TaskCard />
-          <TaskCard />
-          <TaskCard />
+          <TaskCard img={jiujitsu} title="Jiu-Jitsu"/>
+          <TaskCard img={viagem} title="Viagem"/>
+          <TaskCard img={cinema} title="Cinema"/>
+          <TaskCard img={lanche} title="Lanche"/>
+          <TaskCard img={prova} title="Prova"/>
+          <TaskCard img={academia} title="Academia"/>
+          <TaskCard img={compra} title="Compra"/>
+          <TaskCard img={trabalho} title="Trabalho"/>
         </Styled.ContainerCard>
       <Footer />
     </Styled.Container>)

@@ -1,12 +1,12 @@
 import React from 'react';
 import * as Styled from './styles';
 
-function TaskCard(){
+function TaskCard(props){
     return(
         <Styled.Container>
             <Styled.TopCard>
-                <img src="" alt="tarefa"></img>
-                <h3>Tarefa</h3>
+                <img src={props.img} alt="tarefa"></img>
+                <h3>{props.title}</h3>
             </Styled.TopCard>
             <Styled.BottomCard>
                 <strong>15/11/21-</strong>
