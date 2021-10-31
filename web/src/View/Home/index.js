@@ -1,19 +1,52 @@
-import React from 'react';
+import React, {useState} from 'react';
 import * as Styled from './styles';
-import Header from '../../Components/Header'
-import Footer from '../../Components/Footer'
-import Filter from '../../Components/Filter'
+
+
+/*IMAGENS*/
+import Imagem from '../../Imgs/filter.png';
+
+/*COMPONENTES*/
+import Header from '../../Components/Header';
+import Footer from '../../Components/Footer';
+import Filter from '../../Components/Filter';
+import TaskCard from '../../Components/TaskCard';
+
 
 function Home() {
+  const [filterActive, functionFilter] = useState();
   return (
     <Styled.Container> 
       <Header />
         <Styled.ContainerFilter>
-          <Filter title= "TODOS"/>
-          <Filter title= "HOJE"/>
-          <Filter title= "SEMANA"/>
-          <Filter title= "MÊS"/>
+          <button type= 'button' onClick={() => functionFilter("TODOS")}>
+          <Filter title= "TODOS" img={Imagem} actived={filterActive == "TODOS"}/>
+          </button>
+
+          <button type= 'button' onClick={() => functionFilter("HOJE")}>
+          <Filter title= "HOJE" img={Imagem} actived={filterActive == "HOJE"}/>
+          </button>
+
+          <button type= 'button' onClick={() => functionFilter("SEMANA")}>
+          <Filter title= "SEMANA" img={Imagem} actived={filterActive =="SEMANA"}/>
+          </button>
+
+          <button type= 'button' onClick={() => functionFilter("MÊS")}>
+           <Filter title= "MÊS" img={Imagem} actived={filterActive == "MÊS"}/>
+          </button>
+          
+        
         </Styled.ContainerFilter>
+
+        <Styled.ContainerCard>
+          <TaskCard />
+          <TaskCard />
+          <TaskCard />
+          <TaskCard />
+          <TaskCard />
+          <TaskCard />
+          <TaskCard />
+          <TaskCard />
+        </Styled.ContainerCard>
       <Footer />
     </Styled.Container>)
 }

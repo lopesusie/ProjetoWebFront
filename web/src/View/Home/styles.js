@@ -11,4 +11,18 @@ export const ContainerFilter = styled.div`
     justify-content: space-around;
     margin-top: 20px
 
+    button{
+        background: none;
+        border: none;
+    }
+
+`
+
+export const ContainerCard = styled.div`
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
 `
